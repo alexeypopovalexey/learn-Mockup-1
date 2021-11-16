@@ -1,0 +1,150 @@
+.popular {
+    max-height: 856px;
+    border-top: 1px solid #EAC1BF;
+    padding-bottom: 100px;
+    &__container {
+        width: 100%;
+        display: flex;
+        max-width: 1440px;
+        padding-bottom: 50px;
+
+    }
+    &__list {
+        @include position(25%, auto, column, flex-start, left, auto, center);
+        margin-top: 155px;
+        margin-left: 50px;
+        &--title { 
+            margin-top: 20px;
+            margin-left: 80px;
+            @include font($roboto-font, sans-serif, 16px, normal, normal, uppercase, #000, 30px, none);
+        }
+
+        &--element {
+            @include position(auto, auto, row, start, left, auto, center);
+            margin-left: 30px;
+            margin-top: 15px;
+            &--name {
+                margin-left: 20px;
+                @include font($ogg-font, serif, 47px, normal, normal, none, #000, 60px, none);
+            }
+        }
+        &--btn {
+            margin-top: 50px;
+            margin-left: 80px;
+            height: auto;
+            padding: 20px 40px 20px 40px;
+            text-align: center;
+            align-items: center;
+            border: 0;
+            border-radius: 32px;
+            background-image: url('../img/header/gradient-text.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            @include font($roboto-font, sans-serif, 20px, 400, normal, uppercase, #000, 20px, none);
+            border: 2px solid rgba($color: #000000, $alpha: 0);  
+            &:hover {
+                border: 2px solid #EAC1BF;  
+                background-image: url('../img/header/gradient-text.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+    &__cards {
+        @include position(53%, auto, row , center, left, auto, center); 
+        margin-top: 11%;
+        margin-left: 7%;
+    }
+}
+.btn {
+    &__popular {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-top: 5%;
+        border: 0;
+    }
+    &__rose {
+        @include bg-gradient-radial(#FACCBF, white);
+    }
+    &__pyrite{
+        @include bg-gradient-radial(#E3D8C1, white);
+    }
+    &__shungite{
+        @include bg-gradient-radial(#878C8F, white);
+    }
+    &__amethyst{
+        @include bg-gradient-radial(#C09DBD, white);
+    }
+    &__selenite{
+        @include bg-gradient-radial(#FAEDA3, white);
+    }
+}
+
+@media (max-width: 1420px) {
+    .popular {
+        height: auto;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        &__cards {
+            @include position(40%, auto, row , center, left, auto, center); 
+        }
+        &__img {
+            width: 96%;
+            margin: auto;
+        }
+    }
+};
+@media (max-width: 992px) { 
+    .popular {
+        &__cards {
+            @include position(30%, auto, column , center, left, auto, center); 
+        }
+        &__img {
+            margin-bottom: 20px;
+        }
+        &__list {
+            &--title { 
+                width: max-content;
+                @include font($roboto-font, sans-serif, 16px, normal, normal, uppercase, #000, 16px, none);
+            }
+            &--btn {
+                padding: 20px;
+                width: max-content;
+                font-size: .9rem;
+            }
+        }
+    }
+};
+@media (max-width: 576px) {
+    .popular {
+        &__cards {
+            display: none;
+        }
+        &__list {
+            margin: auto;
+            width: 90%;
+            &--title {
+                margin: 0;
+                margin-top: 2%;
+            }
+            &--element{
+                margin-left: 25%;
+                &--name {
+                    @include font($ogg-font, serif, 27px, normal, normal, none, #000, 30px, none);
+                }
+            }
+            &--btn {
+                margin: 0;
+                margin-top: 4%;
+                width: 40%;
+                height: auto;
+                font-size: .9rem;
+                margin-bottom: 2%;
+            }
+        }
+    }
+ }

@@ -1,0 +1,58 @@
+.itention {
+    @include position(100%, 525px, column, center, center, auto, center);
+    border-top: 1px solid #EAC1BF;
+    border-bottom: 1px solid #EAC1BF;
+    background-color: #FBF9F9;
+    
+    &__title {
+        margin-bottom: 0;
+        padding-top: 10px;
+        @include font($ogg-font, serif, 47px, normal, normal, none, #000, 50px, none);
+    }
+    &__content {
+        @include position(90%, auto, row, space-between, center, auto, center);
+        padding-bottom: 20px;
+        max-width: 1440px;
+        &--block {
+            cursor: pointer;
+        }
+        &--btn {
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+            margin-bottom: 15px;
+            cursor: pointer;
+            :hover {
+                background: radial-gradient(closest-side, #B956BB,#FBF9F9 120%);
+            };
+        }
+        &--title{
+            @include font($roboto-font, sans-serif, 16px, normal, normal, uppercase, #000, 16px, none);
+        }
+    }
+}
+
+
+@media (max-width: 992px) { 
+    .itention {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        height: auto;
+        &__content {
+            flex-wrap: wrap;
+            @include position(80%, auto, row, space-between, center, auto, center);
+            &--block {
+                margin-top: 10%;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    }
+};
+
+@media (max-width: 576px) {
+    .itention {
+        &__title {
+            @include font($ogg-font, serif, 27px, normal, normal, none, #000, 30px, none);
+        }
+    }
+}

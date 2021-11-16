@@ -1,0 +1,36 @@
+@keyframes run-line {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-56.2%);
+    }
+    
+}
+@keyframes burger-dropdown {
+    0% {
+        height: 0px;
+    }
+    99% {
+        height: 190px;
+    }
+    100% {
+        height: auto;
+    }
+    
+}
+@keyframes burger-toup {
+    0% {
+        height: max-content;
+    }
+    1% {
+        height: 190px;
+    }
+    99% {
+
+        height: 0;
+    }
+    100% {
+        visibility: hidden;
+    }
+}

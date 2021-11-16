@@ -1,0 +1,107 @@
+
+
+.header {
+    background-color: rgb(250,245,251);
+    @include position(100%, max-content, column, center, center, auto, center);
+    border-bottom: 1px solid #EAC1BF;
+    flex-grow: 1;
+    background-image: url("../img/header/back-ground-header.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    &__wrapper {
+        width: 100%;
+        max-width: 1440px;
+        
+    }
+    &__container {
+        overflow-y: auto;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        padding-top: 10%;
+        width: 60%;
+        align-items: center;
+        max-height: 550px;
+        &__name {
+            word-wrap: normal;
+            @include font ($ogg-font, serif, 117px, 400, italic, none, #000000, 120px, none);
+        }
+    }
+    &__btn {
+        @include position(148px, 148px, row, center, left, auto, center);
+        margin-left: 87%;
+        margin-bottom: 3%;
+        border-radius: 50%;
+        border-width: 0px;
+        background: #000000;
+        cursor: pointer;
+        @include font($roboto-font, sans-serif, 20px, 400, normal, uppercase, #FFFFFF, 30px, none);
+        &:hover {
+            background: #fff;
+            color: #000;
+            border: 2px solid #000;
+        }
+    } 
+}
+
+
+
+@media (max-width: 1200px) {
+    .header {
+        &__title {
+            &__name {
+                @include font ($ogg-font, serif, 70px, 400, italic, none, #000000, 80px, none);
+            }
+        }
+        &__btn {
+            margin-left: 75%;
+        }
+    }
+};
+@media (max-width: 992px) {
+    .header {
+        &__title {
+            padding-top: 5%;
+            margin-bottom: 5%;
+            width: 80%;
+            
+        }
+        &__btn {
+            margin: auto;
+            width: 120px;
+            height: 120px;
+            font-size: 16px;
+            line-height: 16px;
+        }
+    }
+};
+@media (max-width: 768px) { };
+@media (max-width: 576px) {
+    .header {
+        height: auto;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        background-image: url('/img/header/back-ground-header.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        &__title {
+            width: 60%;
+            margin-bottom: 5%;
+            &__name {
+                padding-top: 0;
+                @include font ($ogg-font, serif, 40px, 400, italic, none, #000000, 43px, none)
+            }
+        }
+
+        &__btn {
+            margin-top: 50px;
+            width: 70px;
+            height: 70px;
+            @include font($roboto-font, sans-serif, 14px, 200, normal, uppercase, #FFFFFF, 20px, none);
+        }
+    }
+}
+

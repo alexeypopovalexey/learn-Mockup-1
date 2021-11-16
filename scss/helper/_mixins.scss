@@ -1,0 +1,26 @@
+@mixin font ($ff, $ffalt, $fs, $fw, $fstyle, $tt, $fc, $lh, $td){
+    font-family: $ff, $ffalt;
+    font-size: $fs;
+    font-weight: $fw;
+    font-style: $fstyle;
+    text-transform: $tt;
+    color: $fc;
+    line-height: $lh;
+    text-decoration: $td;
+    word-wrap: break-word;
+};
+
+@mixin position ($w, $h, $fd, $jc, $ta, $m, $ai) {
+    width: $w;
+    height: $h;
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    text-align: $ta;
+    margin: $m;
+    align-items: $ai;
+};
+
+@mixin bg-gradient-radial ($center, $edge){
+    background: radial-gradient(closest-side, $center, $edge);
+}

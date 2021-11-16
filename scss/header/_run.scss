@@ -1,0 +1,44 @@
+.run {
+    height: auto;
+    min-height: 75px;
+    max-height: 85px;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+    &__block {
+        display: flex;
+        width: 250%;
+        animation: run-line 10s linear infinite;
+        
+    }
+    &__link {
+        margin-top: 25px;
+        white-space: nowrap;
+        width: 15%;
+        @include font($roboto-font, sans-serif, 24px, 400, normal, uppercase, #000000, 24px, none);
+        cursor: default;
+        &__beaty {
+            &__elem {
+            background-image: url('../img/header/gradient-text.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-color: #fff;
+                mix-blend-mode: screen;
+            }
+        }
+    }
+    
+}
+@media (max-height: 600px) { 
+    .run {
+        display: none;
+        height: 0;
+    }
+};
+@media (max-width: 1200px) { 
+    .run {
+        display: none;
+    }
+};

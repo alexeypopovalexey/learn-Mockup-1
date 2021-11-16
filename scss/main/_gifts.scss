@@ -1,0 +1,64 @@
+.gifts {
+    &__wrapper{
+        @include position(100%, auto, column, left, center, auto, center);
+        max-width: 1440px;
+        padding-top: 20px;
+
+    }
+    &__title {
+        padding-top: 120px;
+        padding-bottom: 110px;
+        @include font($ogg-font, serif, 116px, normal, normal, none, #000, 120px, none);
+    }
+    &__container {
+        @include position(95%, auto, row, center, left, auto, center);
+        margin-bottom: 150px;
+    }
+    &__content {
+        margin-right: 10px;
+        &--title {
+            @include font($ogg-font, serif, 46px, normal, normal, none, #000, 70px, none);
+        }
+        &--subtitle {
+            @include font($roboto-font, sans-serif, 15px, 400, normal, none, #000, 24px, none);
+        }
+    }
+};
+
+@media (max-width: 1420px) {
+    .gifts {
+        &__container {
+            @include position(auto, auto, column, center, left, auto, center);
+        }    
+        &__content {
+            margin-bottom: 10%;
+        }
+    }
+};
+
+@media (max-width: 768px) {
+    .gifts {
+        &__title {
+            @include font($ogg-font, serif, 55px, normal, normal, none, #000, 60px, none);
+        }
+    }
+};
+
+@media (max-width: 576px) {
+    .gifts {
+        &__content {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 30px;
+            &--img {
+                width: 90%;
+                height: auto;
+            }
+        }
+        &__title {
+            @include font($ogg-font, serif, 56px, normal, normal, none, #000, 60px, none);
+        }
+    }
+ }

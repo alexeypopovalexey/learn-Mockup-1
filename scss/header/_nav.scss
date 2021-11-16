@@ -1,0 +1,183 @@
+
+.nav{
+    @include position(100%, auto, row, space-between, left, auto, center);
+    max-width: 1440px;
+    min-height: 70px;
+    &__burger{
+        padding-left: 58px;
+        position: fixed;
+        top: 50px;
+        cursor: pointer;
+        @include position(max-content, 20px, row, left, left, auto, center);
+        
+        
+        &__wraper { 
+            position: relative;
+            background: rgba(255, 255, 255, 0.8);
+            top: -35px;
+            left: -45%;
+            border: 0;
+            cursor: pointer;
+            @include position(40px, 40px, row, left, left, auto, center);
+            border-radius: 6px;
+            &:hover {
+                background-color: #000;
+                .nav__burger__line {
+                    background-color: #fff;
+                    &::after, &::before {
+                        background-color: #fff;
+                    }
+                }
+                .list {
+                    display: block;
+                }
+            }
+            }
+        &__line {
+            background-color: rgba(0, 0, 0, 1);
+            position: absolute;
+            top: 12px;
+            left: 6px;
+            @include position(28px, 2px, row, left, left, auto, center);
+            &::after {
+                content: '';
+                background: #111111;
+                position: absolute;
+                top: 14px;
+                @include position(28px, 2px, row, left, left, auto, center);
+            }
+            &::before {
+                content: '';
+                background: #111111;
+                position: absolute;
+                top: 7px;
+                @include position(28px, 2px, row, left, left, auto, center);
+            }
+        }
+        
+    }
+    &__label {
+        @include position(50%, auto, row, left, left, auto, center);
+        margin-left: 25%;
+        padding-top: 10px;
+        padding-left: 20px;
+        &__link {
+            letter-spacing: .5px;
+            color: #000000;
+            text-decoration: none;
+        }
+        &__title { 
+            width: max-content;
+            @include font ($roboto-font, sans-serif, 16px, 500,normal, uppercase, #000000, 16px, none);
+        }
+    }
+    &__tool {
+        &--search {
+            &:hover {
+                opacity: .5;
+            }
+
+        }
+    }
+    &__tools {
+        @include position(30%, auto, row, flex-end, left, 0, center);
+        max-width: max-content;
+        z-index: 1;
+        background: rgba(255, 255, 255, 1);
+        
+        &__link{
+            margin: 0;
+            margin-right: 12px;
+            width: max-content;
+        }
+        &--search {
+            width: 65px;
+        }
+    }
+    &__search {
+        height: 34px;
+        border: 2px solid #000;
+        border-radius: 6px;
+        outline: none;
+        padding-left: 10px;
+        @include font ($roboto-font, sans-serif, 16px, 500,normal, none, #000000, 16px, none);
+        &--wrapper {
+            z-index: 0;
+            justify-content: flex-end;
+            margin-right: 5%;
+        }
+    }
+};
+.list {
+    background-color: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    width: max-content;
+    height: 190px;
+    border-radius: 6px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    overflow-y: hidden;
+    animation-name: burger-dropdown;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    &__element {
+        list-style: square;
+        margin-top: 15px;
+    }
+    &__link {
+        @include font ($roboto-font, sans-serif, 16px, 500, normal, uppercase, #000, 20px,  none);
+        &:hover {
+            text-decoration: underline;
+            
+        }
+    }
+}
+.burger_dropdown {
+    animation-name: burger-dropdown;
+    animation-duration: 600ms;
+    animation-timing-function: ease-out;
+    
+}
+.burger_closest {
+    animation-name: burger-toup;
+    animation-duration: 600ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+@media (max-width: 1200px) {
+    .nav {
+        &__search {
+            &--wrapper {
+                margin-right: 2%;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .nav {
+        &__label {
+            display: none;
+        }
+        &__search {
+            &--wrapper {
+                margin-right: 8%;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 576px) { 
+    .nav {
+        &__search {
+            &--wrapper {
+                position: relative;
+                top: 50px;
+                left: 50px;
+            }
+        }
+    }
+}
