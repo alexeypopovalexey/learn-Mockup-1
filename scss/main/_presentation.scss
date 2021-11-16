@@ -15,7 +15,7 @@
         &--text {
             margin-left: 0;
             width: 80%;
-            @include font($ogg-font, serif, 48px, 400, normal, none, #000, 68px, none);
+            @include font($spectral-font, serif, 48px, 400, normal, none, #000, 68px, none);
         }
         &--btn {
             @include position(190px, 48px, row, center, center, auto, center);
@@ -26,6 +26,12 @@
             background-color: #000000;
             cursor: pointer;
             @include font($roboto-font, sans-serif, 20px, 500, normal, uppercase, #ffffff, 20px, none);
+            outline: none;
+            &:focus-visible {
+                color: #000;
+                background-color: #fff;
+                border: 2px solid #000;
+            }
             &:hover {
                 color: #000;
                 background-color: #fff;
@@ -78,7 +84,7 @@
             
             width: 80%;
             &--text {
-                @include font($ogg-font, serif, 38px, 400, normal, none, #000, 48px, none);
+                @include font($spectral-font, serif, 38px, 400, normal, none, #000, 48px, none);
                 margin-right: 0;
             }
             &--btn {
@@ -97,7 +103,7 @@
         &__content {
             &--text {
                 width: 90%;
-                @include font($ogg-font, serif, 30px, 400, normal, none, #000, 36px, none);
+                @include font($spectral-font, serif, 30px, 400, normal, none, #000, 36px, none);
             }
         }
     }

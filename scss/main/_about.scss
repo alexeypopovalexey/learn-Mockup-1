@@ -7,6 +7,7 @@
         margin-top: 160px;
         padding-right: 10%;
         margin-bottom: 170px;
+        
     }
     &__video {
         z-index: 3;
@@ -33,6 +34,12 @@
             right: 150px;
             cursor: pointer;
             @include font($roboto-font, sans-serif, 20px, 500, normal, uppercase, #000, 20px, none);
+            outline: none;
+            &:focus-visible {
+                background-color: rgba(0, 0, 0, 0.7);
+                color: rgba(255, 255, 255, 0.7);
+                border: 2px solid #fff;
+            }
             &:hover {
                 background-color: rgba(0, 0, 0, 0.7);
                 color: rgba(255, 255, 255, 0.7);
@@ -71,6 +78,7 @@
         z-index: -1;
         &--wrapper {
             position: relative;
+            overflow: hidden;
         }
     }
 }

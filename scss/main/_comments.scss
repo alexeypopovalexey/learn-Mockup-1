@@ -7,7 +7,7 @@
         &--text {
             margin-top: 30px;
             margin-bottom: 30px;
-            @include font($ogg-font, serif, 46px, normal, normal, none, #000, 72px, none);
+            @include font($spectral-font, serif, 46px, normal, normal, none, #000, 72px, none);
         }
         &--name {
             margin-bottom: 12px;
@@ -42,7 +42,7 @@
         &__content {
             width: 70%;
             &--text {
-                @include font($ogg-font, serif, 26px, normal, normal, none, #000, 37px, none);
+                @include font($spectral-font, serif, 26px, normal, normal, none, #000, 37px, none);
             }
         }
     }
@@ -51,7 +51,7 @@
     .comments {
         &__content {
             &--text {
-                @include font($ogg-font, serif, 16px, normal, normal, none, #000, 22px, none);
+                @include font($spectral-font, serif, 16px, normal, normal, none, #000, 22px, none);
             }
         }
     }

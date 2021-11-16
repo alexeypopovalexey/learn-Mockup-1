@@ -8,7 +8,7 @@
     &__title {
         padding-top: 120px;
         padding-bottom: 110px;
-        @include font($ogg-font, serif, 116px, normal, normal, none, #000, 120px, none);
+        @include font($spectral-font, serif, 116px, normal, normal, none, #000, 120px, none);
     }
     &__container {
         @include position(95%, auto, row, center, left, auto, center);
@@ -17,7 +17,7 @@
     &__content {
         margin-right: 10px;
         &--title {
-            @include font($ogg-font, serif, 46px, normal, normal, none, #000, 70px, none);
+            @include font($spectral-font, serif, 46px, normal, normal, none, #000, 70px, none);
         }
         &--subtitle {
             @include font($roboto-font, sans-serif, 15px, 400, normal, none, #000, 24px, none);
@@ -39,7 +39,7 @@
 @media (max-width: 768px) {
     .gifts {
         &__title {
-            @include font($ogg-font, serif, 55px, normal, normal, none, #000, 60px, none);
+            @include font($spectral-font, serif, 55px, normal, normal, none, #000, 60px, none);
         }
     }
 };
@@ -58,7 +58,7 @@
             }
         }
         &__title {
-            @include font($ogg-font, serif, 56px, normal, normal, none, #000, 60px, none);
+            @include font($spectral-font, serif, 56px, normal, normal, none, #000, 60px, none);
         }
     }
  }

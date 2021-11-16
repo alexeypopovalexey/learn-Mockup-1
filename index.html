@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal</title>
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <title>Crystals</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
     />
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
     <script defer type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script defer type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script defer type="text/javascript" src="slick/slick.min.js"></script>
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
-    <script defer src="./js/main.js"  type="module"></script>
+    <script src="./js/main.js"  type="module"></script>
+    
 </head>
 <body>
     <section class="header__container" role="banner" >
@@ -26,7 +32,7 @@
                 <button class="nav__burger__wraper" aria-label="nav__burger">
                     <span class="nav__burger__line"></span>
                 </button>
-                <div class="nav__burger--list list disactivate">
+                <div class="list disactivate">
                     <ul>
                         <li class="list__element">
                             <a href="#" class="list__link">Main</a>
@@ -49,13 +55,11 @@
                     </ul>
                 </div>
             </nav>
-            <div class="nav__label"><a href="#" class="nav__label__link "><h4 class="nav__label__title">Free shipping on orders over $75</h4></a></div>
-            <div class="nav__search--wrapper">
-                <input type="search" placeholder="Search the site" class="nav__search animate__animated disactivate">
-            </div>
+            <div class="nav__advertisement"><a href="#" class="nav__advertisement__link "><h4 class="nav__advertisement__title">Free shipping on orders over $75</h4></a></div>
             <div class="nav__tools">
+                <input type="search" placeholder="Search the site" class="nav__search animate__animated disactivate">`
                 <a class="nav__tools__link nav__tools--search" href="#"><img src="img/nav/search.svg" alt="search" class="nav__tool--search" id="search" ></a>
-                <a href="#" class="nav__tools__link"><img src="img/nav/Frame.svg" alt="choose a stone"></a>
+                <a href="#" class="nav__tools__link"><img src="img/nav/Frame.svg" alt="Logo"></a>
             </div>
         </header>
         <section class="header">
@@ -98,7 +102,7 @@
                 </div>
                 <div class="presentation__img">
                     <div class="presentation__img--shadow"></div>
-                    <img src="./img/presentation/Rectangle.svg" alt="Carts">
+                    <img src="./img/presentation/Rectangle.svg" alt="Cards">
                 </div>
             </div>
         </section>
@@ -153,15 +157,12 @@
                         <div class="btn__selenite btn__popular"></div>
                         <h2 class="popular__list--element--name">Selenite</h2>
                     </div>
-                    <div class="popular__list--btn">Find your match</div>
+                    <button class="popular__list--btn">Find your match</button>
                 </div>
                 <div class="popular__cards">
-                    <a href="#">
                         <img src="./img/popular/left.png" alt="Tower Stone" class="popular__img">
-                    </a>
-                    <a href="#">
+                        
                         <img src="./img/popular/right.png" alt="Pyramid Stone" class="popular__img">
-                    </a>
                 </div>
             </div>
         </section>
@@ -170,45 +171,45 @@
             <div class="itention__content">
                 <div class="itention__content--block">
                     <button class="itention__content--btn"> <img src="./img/intetnion/Love.svg" alt="Love"></button>
-                    <a href="#" class="itention__content--title">
-                        <h4 >Love</h4>
-                    </a>
+                    <span  class="itention__content--title">
+                        Love
+                    </span>
                 </div>  
                 <div class="itention__content--block">
                     <button class="itention__content--btn">  <img src="./img/intetnion/Calm.svg" alt="Calm"></button>
-                    <a href="#" class="itention__content--title">
-                        <h4 >Calm</h4>
-                    </a>
+                    <span  class="itention__content--title">
+                        Calm
+                    </span>
                 </div>
                 <div class="itention__content--block">
                     <button class="itention__content--btn"> <img src="img/intetnion/Create.svg" alt="Create"></button>
-                    <a href="#" class="itention__content--title">
-                        <h4 >Create</h4>
-                    </a>
+                    <span  class="itention__content--title">
+                        Create
+                    </span>
                 </div>
                 <div class="itention__content--block">
                     <button class="itention__content--btn"> <img src="./img/intetnion/Protect.svg" alt="Protect"></button>
-                    <a href="#" class="itention__content--title">
-                        <h4 >Protect</h4>
-                    </a>
+                    <span  class="itention__content--title">
+                        Protect
+                    </span>
                 </div>
                 <div class="itention__content--block">
                     <button class="itention__content--btn"> <img src="img/intetnion/Balance.svg" alt="Balance"></button>
-                    <a href="#" class="itention__content--title">
-                        <h4 >Balance</h4>
-                    </a>
+                    <span  class="itention__content--title">
+                        Balance
+                    </span>
                 </div>
                 <div class="itention__content--block">
                     <button class="itention__content--btn"> <img src="img/intetnion/Manifest.svg" alt="Manifest"></button>
-                    <a href="#" class="itention__content--title">
-                        <h4 >Manifest</h4>
-                    </a>
+                    <span  class="itention__content--title">
+                        Manifest
+                    </span>
                 </div>
                 <div class="itention__content--block">
                     <button class="itention__content--btn"> <img src="img/intetnion/Heal.svg" alt="Heal"></button>
-                    <a href="#" class="itention__content--title">
-                        <h4>Heal</h4>
-                    </a>
+                    <span  class="itention__content--title">
+                        Heal
+                    </span>
                 </div>
                 
             </div>
@@ -289,27 +290,51 @@
                         <h6 class="example--link">#crystalsdotcom</h6>
                     </a>
                 </div>
-                <div class="flex flex-wrap gap-5 justify-space-between max-w-5xl mx-auto px-6 example__content">
-                    <a data-fancybox="gallery" data-src="./img/example/stones.png" class="example__content--link">
-                        <img src="./img/example/stones.png" alt="Crystals" class="rounded"/>
-                    </a>
-                    <a data-fancybox="gallery" data-src="./img/example/water.png" class="example__content--link">
-                        <img src="./img/example/water.png" alt="Water" class="rounded"/>
-                    </a>
-                    <a data-fancybox="gallery" data-src="./img/example/business-card.png" class="example__content--link">
-                        <img src="./img/example/business-card.png" alt="Business card" class="rounded"/>
-                    </a>
-                    <a data-fancybox="gallery" data-src="./img/example/buty-stone.png" class="example__content--link">
-                        <img src="./img/example/buty-stone.png" alt="Crystal" class="rounded"/>
-                    </a>
-                    <a data-fancybox="gallery" data-src="./img/example/stones-with-book.png" class="example__content--link">
-                        <img src="./img/example/stones-with-book.png" alt="Crystals" class="rounded"/>
-                    </a>
-                    <a data-fancybox="gallery" data-src="./img/example/girl.png" class="example__content--link">
-                        <img src="./img/example/girl.png" alt="Girl" class="rounded">
-                    </a>
+                <div id="index-gallery" class="wrapper-gallery">
+                    <div class="gallery-img img1">
+                        <div>
+                            <a href="#">
+                                This is a title
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-img img2">
+                        <div>
+                            <a href="#">
+                                This is a title
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-img img3">
+                        <div>
+                            <a href="#">
+                                This is a title
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-img img4">
+                        <div>
+                            <a href="#">
+                                This is a title
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-img img5">
+                        <div>
+                            <a href="#">
+                                This is a title
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-img img6">
+                        <div>
+                            <a href="#">
+                                This is a title
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </div>  
         </section>
     </main>
     <footer class="footer" id="footer">
@@ -358,5 +383,7 @@
             <div class="footer__colorshadow--yellow"></div>
         </div>
     </footer>
+
+    <script src="./js/gallery.js"></script>
 </body>
 </html>

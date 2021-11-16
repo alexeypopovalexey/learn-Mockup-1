@@ -25,14 +25,15 @@
             margin-top: 15px;
             &--name {
                 margin-left: 20px;
-                @include font($ogg-font, serif, 47px, normal, normal, none, #000, 60px, none);
+                @include font($spectral-font, serif, 47px, normal, normal, none, #000, 60px, none);
             }
         }
         &--btn {
             margin-top: 50px;
-            margin-left: 80px;
+            margin-left: auto;
             height: auto;
-            padding: 20px 40px 20px 40px;
+            padding: 20px 40px ;
+            min-width: 140px;
             text-align: center;
             align-items: center;
             border: 0;
@@ -41,8 +42,17 @@
             background-repeat: no-repeat;
             background-position: center;
             cursor: pointer;
-            @include font($roboto-font, sans-serif, 20px, 400, normal, uppercase, #000, 20px, none);
+            @include font($roboto-font, sans-serif, 16px, 400, normal, uppercase, #000, 16px, none);
             border: 2px solid rgba($color: #000000, $alpha: 0);  
+            outline: none;
+                &:focus-visible {
+                    border: 2px solid #EAC1BF;  
+                    background-image: url('../img/header/gradient-text.png');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
             &:hover {
                 border: 2px solid #EAC1BF;  
                 background-image: url('../img/header/gradient-text.png');
@@ -96,6 +106,11 @@
             width: 96%;
             margin: auto;
         }
+        &__list {
+            &--btn {
+                min-width: none;
+            }
+        }
     }
 };
 @media (max-width: 992px) { 
@@ -134,7 +149,7 @@
             &--element{
                 margin-left: 25%;
                 &--name {
-                    @include font($ogg-font, serif, 27px, normal, normal, none, #000, 30px, none);
+                    @include font($spectral-font, serif, 27px, normal, normal, none, #000, 30px, none);
                 }
             }
             &--btn {

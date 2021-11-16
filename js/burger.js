@@ -1,8 +1,8 @@
 const BURGER = document.querySelector('.nav__burger__wraper');
-const BURGERLIST = document.querySelector('.nav__burger--list');
+const BURGERLIST = document.querySelector('.list');
 const BODY = document.querySelector('body');
 const BURGERWRAPPER = document.querySelector('.nav__burger');
-const NEXTELEM = document.querySelector('.nav__label__link');
+const NEXTELEM = document.querySelector('.nav__advertisement__link');
 const NEXTELEMBYMOBILE = document.querySelector('.nav__tools__link');
 
 
@@ -13,7 +13,7 @@ function activateBurger () {
 };
 
 function disactiveOnBodyClick (event) {
-    if (event.target !== BURGERLIST && event.target !== BURGER && event.target.closest('div') !== BURGERWRAPPER) {
+    if (event.target !== BURGERLIST && event.target !== BURGER && event.target.closest('nav') !== BURGERWRAPPER) {
         BURGERLIST.classList.remove('dropdown');
         BURGERLIST.classList.add('burger_closest');
 
@@ -21,7 +21,7 @@ function disactiveOnBodyClick (event) {
 }
 
 function disactivateOnBlur (event) {
-    if (event.target.closest('div') !== BURGERWRAPPER) {
+    if (event.target.closest('nav') !== BURGERWRAPPER) {
         BURGERLIST.classList.remove('dropdown');
         BURGERLIST.classList.add('burger_closest');
     }
@@ -30,7 +30,6 @@ function disactivateOnBlur (event) {
 export const burger = () => {
     BURGER.addEventListener('focus', activateBurger);
     BODY.addEventListener('click', disactiveOnBodyClick);
-    BURGER.addEventListener('blur', disactivateOnBlur);
     NEXTELEM.addEventListener('focus', disactivateOnBlur);
     NEXTELEMBYMOBILE.addEventListener('focus', disactivateOnBlur);
 }

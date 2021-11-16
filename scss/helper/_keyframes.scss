@@ -34,3 +34,30 @@
         visibility: hidden;
     }
 }
+
+@keyframes open-search {
+    0% {
+        width: 0px;
+    }
+    99% {
+        width: 170px;
+    }
+    100% {
+        width: auto;
+    }
+    
+}
+
+@keyframes close-search {
+    0% {
+        width: auto;
+    }
+    1% {
+        width: 170px;
+    }
+    100% {
+        width: 0px;
+        visibility: hidden;
+    }
+    
+}
